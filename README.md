@@ -18,7 +18,6 @@ Mục tiêu chính là mô phỏng hành vi người dùng và xác minh các ch
 ---
 
 ## 🎯 Mục tiêu Kiểm Thử
-:contentReference[oaicite:1]{index=1}
 
 - Đảm bảo các tính năng cốt lõi của BookCart hoạt động ổn định.  
 - Kiểm tra tính chính xác của các chức năng như login, register, search, cart, wishlist, orders.  
@@ -28,7 +27,6 @@ Mục tiêu chính là mô phỏng hành vi người dùng và xác minh các ch
 ---
 
 ## 🛠 Công Nghệ Sử Dụng 
-:contentReference[oaicite:2]{index=2}
 
 - **Python**  
 - **Selenium WebDriver**  
@@ -38,8 +36,6 @@ Mục tiêu chính là mô phỏng hành vi người dùng và xác minh các ch
 
 ---
 ## ✔️ Danh Sách Test Cases
-Dưới đây là tổng quan các test case đã thực hiện, trích từ báo cáo (trang 4–29):  
-:contentReference[oaicite:3]{index=3}
 
 ### 🔐 1. Login / Register
 - TC001 – Đăng ký hợp lệ  
