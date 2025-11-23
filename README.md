@@ -35,35 +35,127 @@ Mục tiêu chính là mô phỏng hành vi người dùng và xác minh các ch
 - **PyTest / unittest** 
 
 ---
-## ✔️ Danh Sách Test Cases
+## 📌 TEST CASE LIST (Full)
 
-### 🔐 1. Login / Register
-- TC001 – Đăng ký hợp lệ  
-- TC002 – Đăng ký sai first name + confirm password không khớp  
-- TC003 – Đăng nhập thành công  
-- TC004 – Đăng nhập với username sai  
-- TC005 – Đăng xuất  
+### 1️⃣ LOGIN — REGISTER — LOGOUT
 
-### 🔎 2. Search
-- TC006 – Tìm kiếm bằng Enter (Fail)  
-- TC007 – Tìm kiếm theo đề xuất (Pass)  
-- TC008 – Tìm kiếm theo giá  
+#### ✔ Register
+- **TC001 – Register (Valid)**  
+  Đăng ký tài khoản hợp lệ → chuyển sang trang Login.
 
-### 🛒 3. Cart – Form – Orders
-- TC009 – Tìm kiếm đơn hàng trong My Orders  
-- TC010 – Register với ký tự số (Fail)  
-- TC011 – Register không chọn giới tính (Fail)  
-- TC012 – Checkout thiếu thông tin  
+- **TC002 – Register (Invalid: First name trống + Confirm password không khớp)**  
+  Lỗi: “First Name is required”, “Password do not match”.
 
-### 🧭 4. Navigation
-- TC013 – Điều hướng danh mục  
-- TC014 – Điều hướng menu sau login  
-- TC015 – Xem My Orders + chuyển trang  
+- **TC003 – Register (Invalid: Firstname/Lastname là ký tự số)**  
+  Hệ thống báo lỗi validation.
 
-### ❤️ 5. Wishlist / Cart
-- TC007 (khác) – Thêm sản phẩm từ trang chi tiết  
-- TC008 (khác) – Thêm sản phẩm từ trang chính  
-- TC011 – Thêm wishlist  
+- **TC004 – Register (Invalid: Không chọn giới tính)**  
+  Lỗi: “please select your gender”.
+
+- **TC005 – Register (Invalid: Username đã tồn tại)**  
+  Lỗi: “User Name is not available”.
+
+#### ✔ Login
+- **TC006 – Login (Valid)**  
+  Đăng nhập thành công → về trang Home.
+
+- **TC007 – Login (Invalid username)**  
+  Lỗi: “Username or Password is incorrect”.
+
+- **TC008 – Login (Blank fields)**  
+  Lỗi *mat-error* khi để trống.
+
+#### ✔ Logout
+- **TC009 – Logout Successfully**  
+  Logout → quay về trang Login.
+
+
+---
+
+### 2️⃣ FORM VALIDATION
+- **TC010 – Checkout với form trống**  
+  Các trường hiển thị class *mat-form-field-invalid*.
+
+- **TC011 – Checkout với pincode 2 chữ số**  
+  Lỗi: “pincode must have 6 digits only and cannot start with 0”.
+
+---
+
+### 3️⃣ NAVIGATION
+- **TC012 – Navigate Categories**  
+  Điều hướng giữa: Biography, Fiction, Mystery, Fantasy, Romance, All Categories.
+
+- **TC013 – Navigation User Menu**  
+  Wishlist → Cart → My Orders → Swagger → GitHub → Logout.
+
+- **TC014 – Navigate My Orders Pagination**  
+  Chọn order → Next Page → duyệt đến hết.
+
+---
+
+### 4️⃣ ORDER SEARCH
+- **TC015 – Search My Orders**  
+  Tìm bằng Order ID → hiển thị đúng kết quả.
+
+---
+
+### 5️⃣ SEARCH FUNCTION
+- **TC016 – Search by Enter (Known Issue)**  
+  Tìm bằng Enter với chuỗi dài → kết quả có thể không hiển thị.
+
+- **TC017 – Search using Suggestion Dropdown**  
+  Nhập “slayer” → chọn gợi ý → hiển thị đúng sách.
+
+- **TC018 – Filter by Price**  
+  Slider giá = 311 → tất cả sản phẩm ≤ 311.
+
+---
+
+### 6️⃣ WISHLIST
+- **TC019 – Add 1 Product to Wishlist**  
+  Sản phẩm hiển thị trong wishlist.
+
+---
+
+### 7️⃣ CART — CHECKOUT
+
+#### ✔ Add to Cart
+- **TC020 – Add Product by ID (15)**  
+  Giỏ hàng hiển thị “Harry Potter and the Sorcerer's Stone”.
+
+- **TC021 – Add Two Products from Homepage**  
+  Cả 2 sản phẩm hiển thị trong cart.
+
+- **TC022 – View Cart**  
+  Giỏ hàng có “All of Us with Wings”.
+
+#### ✔ Cart Operations
+- **TC023 – Cart Total Calculation**  
+  Tổng giá = price × quantity.
+
+- **TC024 – Clear Cart**  
+  Hiển thị: “Your shopping cart is empty.”
+
+- **TC025 – Adjust Product Quantity**  
+  Tăng đến 5 → giảm 4 → hiển thị đúng.
+
+#### ✔ Checkout
+- **TC026 – Checkout Successfully**  
+  Điền đầy đủ thông tin → tạo order → chuyển sang My Orders.
+
+- **TC027 – Checkout without Login**  
+  Nhấn checkout khi chưa login → tự động chuyển sang trang Login.
+
+---
+
+### 8️⃣ RESPONSIVE TESTING
+- **TC028 – Responsive iPhone (375×667)**
+- **TC029 – Responsive iPad (768×1024)**
+- **TC030 – Responsive Tablet (1280×800)**
+- **TC031 – Responsive Desktop (1920×1080)**
+
+Kiểm tra: logo, navbar, menu mobile, liên kết Swagger/GitHub, giao diện từng thiết bị.
+
 ---
 
 1. [Yêu Cầu](#yêu-cầu)
