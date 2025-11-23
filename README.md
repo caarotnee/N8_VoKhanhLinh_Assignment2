@@ -7,7 +7,6 @@
 Toàn bộ quá trình kiểm thử được thực hiện bằng **Selenium WebDriver + Python**.  
 Mục tiêu chính là mô phỏng hành vi người dùng và xác minh các chức năng quan trọng của website hoạt động chính xác.
 
-Theo mô tả trang 1–3 của tài liệu báo cáo, dự án tập trung vào:  
 - Đăng ký tài khoản  
 - Đăng nhập / đăng xuất  
 - Tìm kiếm sản phẩm  
