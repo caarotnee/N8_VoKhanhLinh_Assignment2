@@ -1,9 +1,77 @@
+# 📚 Automated Testing with Selenium  
+### 🔍 Công cụ kiểm thử tự động cho ứng dụng BookCart  
+## 🚀 Giới thiệu Project
+Đây là bài tập Assignment 2 của môn **Kiểm Thử Phần Mềm**, tập trung vào việc kiểm thử tự động website **BookCart**:  
+🔗 https://bookcart.azurewebsites.net/
 
-# N8_VoKhanhLinh_Assignment2
+Toàn bộ quá trình kiểm thử được thực hiện bằng **Selenium WebDriver + Python**.  
+Mục tiêu chính là mô phỏng hành vi người dùng và xác minh các chức năng quan trọng của website hoạt động chính xác.
 
-Kho lưu trữ này chứa các tập lệnh Selenium để tự động hóa các quy trình kiểm thử. Làm theo hướng dẫn dưới đây để thiết lập môi trường và chạy các tập lệnh.
+Theo mô tả trang 1–3 của tài liệu báo cáo, dự án tập trung vào:  
+- Đăng ký tài khoản  
+- Đăng nhập / đăng xuất  
+- Tìm kiếm sản phẩm  
+- Thêm giỏ hàng, wishlist  
+- Điều hướng menu  
+- Kiểm tra đơn hàng  
+- Kiểm thử form và validation  
+:contentReference[oaicite:0]{index=0}
 
-## Mục Lục
+---
+
+## 🎯 Mục tiêu Kiểm Thử
+:contentReference[oaicite:1]{index=1}
+
+- Đảm bảo các tính năng cốt lõi của BookCart hoạt động ổn định.  
+- Kiểm tra tính chính xác của các chức năng như login, register, search, cart, wishlist, orders.  
+- Phát hiện lỗi tiềm ẩn thông qua automation.  
+- Tăng hiệu suất kiểm thử so với manual testing.  
+
+---
+
+## 🛠 Công Nghệ Sử Dụng 
+:contentReference[oaicite:2]{index=2}
+
+- **Python**  
+- **Selenium WebDriver**  
+- **Chrome Browser**  
+- **Chromedriver**  
+- **PyTest / unittest** 
+
+---
+## ✔️ Danh Sách Test Cases
+Dưới đây là tổng quan các test case đã thực hiện, trích từ báo cáo (trang 4–29):  
+:contentReference[oaicite:3]{index=3}
+
+### 🔐 1. Login / Register
+- TC001 – Đăng ký hợp lệ  
+- TC002 – Đăng ký sai first name + confirm password không khớp  
+- TC003 – Đăng nhập thành công  
+- TC004 – Đăng nhập với username sai  
+- TC005 – Đăng xuất  
+
+### 🔎 2. Search
+- TC006 – Tìm kiếm bằng Enter (Fail)  
+- TC007 – Tìm kiếm theo đề xuất (Pass)  
+- TC008 – Tìm kiếm theo giá  
+
+### 🛒 3. Cart – Form – Orders
+- TC009 – Tìm kiếm đơn hàng trong My Orders  
+- TC010 – Register với ký tự số (Fail)  
+- TC011 – Register không chọn giới tính (Fail)  
+- TC012 – Checkout thiếu thông tin  
+
+### 🧭 4. Navigation
+- TC013 – Điều hướng danh mục  
+- TC014 – Điều hướng menu sau login  
+- TC015 – Xem My Orders + chuyển trang  
+
+### ❤️ 5. Wishlist / Cart
+- TC007 (khác) – Thêm sản phẩm từ trang chi tiết  
+- TC008 (khác) – Thêm sản phẩm từ trang chính  
+- TC011 – Thêm wishlist  
+---
+
 1. [Yêu Cầu](#yêu-cầu)
 2. [Cài Đặt](#cài-đặt)
 3. [Thiết Lập Môi Trường](#thiết-lập-môi-trường)
