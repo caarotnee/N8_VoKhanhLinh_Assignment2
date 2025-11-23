@@ -14,7 +14,6 @@ Mục tiêu chính là mô phỏng hành vi người dùng và xác minh các ch
 - Điều hướng menu  
 - Kiểm tra đơn hàng  
 - Kiểm thử form và validation  
-:contentReference[oaicite:0]{index=0}
 
 ---
 
